@@ -51,11 +51,11 @@
                 box-sizing: border-box;
                 border-bottom: 1px solid rgba(255,255,255,0.2);
             }
-            div.wrap-body{
-                display: none;
-            }
             div.wrap-body:target{
                 display: block;
+            }
+            div.wrap-body:not(:target){
+                display: none;
             }
             div.tab{
                 display: block;
@@ -145,12 +145,11 @@
             </div>
         </div>
         <div id="model" class="wrap-body">
-
             <div class='wrap'>
-                <video poster='http://7xkwkh.com1.z0.glb.clouddn.com/video/phone-dance.png' src="http://7xkwkh.com1.z0.glb.clouddn.com/video1/video13.m4v" controls></video>
+                <video poster='http://7xkwkh.com1.z0.glb.clouddn.com/video/phone-dance.png' src="http://7xkwkh.com1.z0.glb.clouddn.com/video1/video13.mp4" controls></video>
             </div>
             <div class='wrap'>
-                <video poster='http://7xkwkh.com1.z0.glb.clouddn.com/video/phone-dance.png' src="http://7xkwkh.com1.z0.glb.clouddn.com/video1/video14.m4v" controls></video>
+                <video poster='http://7xkwkh.com1.z0.glb.clouddn.com/video/phone-dance.png' src="http://122.70.129.103/xdispatch/7xkwkh.com1.z0.glb.clouddn.com/video1/video14.MP4" controls></video>
             </div>
         </div>
         <script type="text/javascript">
@@ -161,6 +160,10 @@
                 for (var b = 0; b < vss.length; b++) {
                     vss[b].setAttribute('data-num', '💃' + (b + 1))
                 }
+            }
+            var lo=location.href;
+            if(lo.indexOf('#')==-1){
+                location.href=document.querySelector('a').href;
             }
         </script>
     </body>
