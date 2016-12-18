@@ -98,6 +98,27 @@
             div.tab input[checked]>a{
                 color: red!important;
             }
+            div.wrap-body:before{
+                content:'';
+                width: 0;
+                height: 0;
+                display: block;
+                position: fixed;
+                top:39px;
+                border-left:6px solid transparent;
+                border-right:6px solid transparent;
+                border-top:10px solid #101010;
+                right:50%;
+                z-index: 1000;
+            }
+            div#dance:before{
+                left:25%;
+                margin-left:-6px;
+            }
+            div#model:before{
+                margin-right:-6px;
+                right:25%;
+            }
         </style>
     </head>
     <body>
